@@ -18,6 +18,9 @@ app.use(express.static(__dirname));
 
 const sessions = {};
 
+app.get("/", (req, res) => {
+    res.send("OK");
+});
 
 // ---------- Обработка картинки для лучшего OCR ----------
 async function preprocessCaptcha(imageBuffer) {
