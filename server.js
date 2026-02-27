@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 3001;
+
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -15,7 +17,6 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 const sessions = {};
-const PORT = process.env.PORT || 3001;
 
 
 // ---------- Обработка картинки для лучшего OCR ----------
