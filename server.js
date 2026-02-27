@@ -15,7 +15,8 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 const sessions = {};
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+
 
 // ---------- Обработка картинки для лучшего OCR ----------
 async function preprocessCaptcha(imageBuffer) {
